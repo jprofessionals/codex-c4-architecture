@@ -1,0 +1,39 @@
+{
+  "name": "c4-architecture",
+  "version": "0.1.0",
+  "description": "Create and maintain C4 architecture models as Structurizr DSL workspaces rendered to SVG.",
+  "author": {
+    "name": "JProfessionals",
+    "url": "https://github.com/jprofessionals/codex-c4-architecture"
+  },
+  "homepage": "https://github.com/jprofessionals/codex-c4-architecture",
+  "repository": "https://github.com/jprofessionals/codex-c4-architecture",
+  "license": "MIT",
+  "keywords": [
+    "architecture",
+    "c4",
+    "structurizr",
+    "dsl",
+    "documentation"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "C4 Architecture",
+    "shortDescription": "Create Structurizr-backed C4 architecture docs.",
+    "longDescription": "A local-first Codex skill for creating C4 architecture models with Structurizr DSL as the source of truth and SVG rendering through a Makefile pipeline. It emphasizes evidence, security-relevant boundaries, and avoiding invented architecture.",
+    "developerName": "JProfessionals",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/jprofessionals/codex-c4-architecture",
+    "defaultPrompt": [
+      "Use c4-architecture to create C4 docs for this repo.",
+      "Use c4-architecture to update docs/c4 after this architecture change.",
+      "Use c4-architecture to review whether our C4 model matches the code."
+    ],
+    "brandColor": "#0F766E"
+  }
+}

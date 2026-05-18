@@ -1,0 +1,20 @@
+{
+  "name": "codex-c4-architecture",
+  "interface": {
+    "displayName": "Codex C4 Architecture"
+  },
+  "plugins": [
+    {
+      "name": "c4-architecture",
+      "source": {
+        "source": "local",
+        "path": "./plugins/c4-architecture"
+      },
+      "policy": {
+        "installation": "INSTALLED_BY_DEFAULT",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
