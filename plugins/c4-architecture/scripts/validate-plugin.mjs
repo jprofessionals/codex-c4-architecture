@@ -82,6 +82,7 @@ const requiredFiles = [
   path.join(pluginRoot, "NOTICE.md"),
   path.join(pluginRoot, "scripts", "validate-plugin.mjs"),
   path.join(skillRoot, "SKILL.md"),
+  path.join(skillRoot, "references", "workflow.md"),
   path.join(skillRoot, "references", "modeling-guardrails.md"),
   path.join(skillRoot, "references", "security-overlay.md"),
   path.join(skillRoot, "references", "structurizr-dsl.md"),
@@ -154,6 +155,12 @@ if (!skillText.includes("Structurizr DSL")) {
 }
 if (!skillText.includes("make -C docs/c4 render")) {
   errors.push("Skill text should require the docs/c4 render command");
+}
+if (!skillText.includes("references/workflow.md")) {
+  errors.push("Skill text should lazy-load references/workflow.md");
+}
+if (skillText.split(/\r?\n/).length > 60) {
+  errors.push("Skill entry point should stay compact at 60 lines or fewer");
 }
 
 const makefile = readText(path.join(templateRoot, "Makefile"));

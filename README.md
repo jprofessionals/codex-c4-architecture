@@ -67,7 +67,14 @@ The marketplace file contains:
 
 Use this when you want the plugin vendored into one target project.
 
-From this repository:
+Clone the public repository:
+
+```bash
+git clone https://github.com/jprofessionals/codex-c4-architecture.git
+cd codex-c4-architecture
+```
+
+Then copy the plugin into your target project:
 
 ```bash
 TARGET=/path/to/your/project
@@ -113,18 +120,30 @@ Use c4-architecture to create C4 docs for this repo.
 Use this when you want the C4 skill available from any project.
 
 ```bash
-cd /path/to/codex-c4-architecture
+git clone https://github.com/jprofessionals/codex-c4-architecture.git
+cd codex-c4-architecture
 node plugins/c4-architecture/scripts/validate-plugin.mjs
 codex plugin marketplace add "$PWD"
 ```
 
-If you publish this repository, Codex also supports marketplace sources such as
-GitHub owner/repo names and Git URLs:
+Codex also supports marketplace sources such as GitHub owner/repo names and Git
+URLs:
 
 ```bash
-codex plugin marketplace add owner/codex-c4-architecture
-codex plugin marketplace add https://github.com/owner/codex-c4-architecture.git
+codex plugin marketplace add jprofessionals/codex-c4-architecture
+codex plugin marketplace add https://github.com/jprofessionals/codex-c4-architecture.git
 ```
+
+Use global install only when you want this skill available in most sessions. For
+minimum skill catalog noise, prefer the local project install.
+
+## Context Footprint
+
+Installed skills expose catalog metadata so the agent can decide when to use
+them. This plugin keeps `SKILL.md` intentionally small. The detailed workflow,
+C4 guardrails, Structurizr notes, security overlay, provenance, and templates
+live in referenced files that are read only when the skill is activated or when a
+new `docs/c4` workspace is being created.
 
 ## Validation
 
