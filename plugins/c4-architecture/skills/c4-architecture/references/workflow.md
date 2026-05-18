@@ -8,6 +8,8 @@ A task using this skill is complete only when:
 - the model separates model, views, and styles unless the project already has a
   different established C4 layout
 - generated SVGs under `docs/c4/rendered/` match the DSL views
+- `docs/c4/README.md` explains the model, diagrams, assumptions, and how to
+  read the architecture
 - assumptions and unknowns are documented instead of invented
 - security-relevant boundaries and flows are represented or explicitly called
   out as unknown
@@ -59,6 +61,10 @@ A task using this skill is complete only when:
    Use stable identifiers for elements and views. Prefer concise element names,
    concrete relationship descriptions, and explicit technologies on containers.
 
+   Do not rely on `include *` when it produces an unreadable view. Include the
+   elements that belong at the current C4 level, and create supplementary views
+   for crowded areas.
+
 5. Add security-relevant architecture information.
 
    Capture trust boundaries, external actors, third-party systems, sensitive
@@ -79,7 +85,20 @@ A task using this skill is complete only when:
    has no network access, report that as the blocker. Do not silently switch to a
    different diagram format.
 
-7. Summarize changes.
+7. Inspect rendered output.
+
+   Check generated SVG dimensions and readability. If a diagram is too wide or
+   dense, adjust that view's `autoLayout` direction, shorten relationship
+   labels, remove wrong-level elements, or split the diagram into focused views.
+   Do not assume `lr` or `tb` is correct for every view.
+
+8. Write explanatory docs.
+
+   Update `docs/c4/README.md` with a human-readable explanation of the model,
+   diagram reading order, architecture summary, security/trust boundaries,
+   evidence, assumptions, and maintenance instructions.
+
+9. Summarize changes.
 
    Tell the user which diagrams changed, which assumptions remain, and whether
    rendering was verified. Include paths to the DSL and SVG files.

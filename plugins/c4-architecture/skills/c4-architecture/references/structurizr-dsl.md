@@ -69,9 +69,14 @@ container system "Containers" {
 
 component system.api "ApiComponents" {
     include *
-    autoLayout lr
+    autoLayout tb
 }
 ```
+
+Choose `autoLayout` per view after rendering. `lr` can work well for context and
+container diagrams, but dense component diagrams often become excessively wide.
+Use `tb` for a view when it improves readability, and split the view if changing
+direction is not enough.
 
 ## Rendering
 

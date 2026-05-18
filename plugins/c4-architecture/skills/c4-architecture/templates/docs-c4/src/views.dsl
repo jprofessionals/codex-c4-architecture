@@ -10,5 +10,5 @@ container system "Containers" {
 
 component system.api "Components" {
     include *
-    autoLayout lr
+    autoLayout tb
 }

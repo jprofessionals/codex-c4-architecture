@@ -23,6 +23,29 @@ docs/c4/
 The DSL files under `src/` are the single source of truth. SVG files under
 `rendered/` are generated and should not be edited directly.
 
+## How To Read This Model
+
+Start with the System Context diagram to understand people and external systems.
+Then read the Container diagram to understand runnable units, data stores, and
+major communication paths. Read Component diagrams only when you need detail
+inside a specific container.
+
+## Diagrams
+
+- [System Context](rendered/structurizr-SystemContext.svg)
+- [Containers](rendered/structurizr-Containers.svg)
+- [Components](rendered/structurizr-Components.svg)
+
+## Architecture Summary
+
+Describe the main responsibilities, data flows, and design decisions represented
+by the model.
+
+## Security And Trust Boundaries
+
+Describe external systems, internet-facing surfaces, identity flows, sensitive
+data stores, admin paths, and important unknowns.
+
 ## Change Diagrams
 
 1. Edit the relevant file under `src/`.
