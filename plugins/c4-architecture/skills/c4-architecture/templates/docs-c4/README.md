@@ -1,6 +1,8 @@
 # C4 Architecture
 
-This directory contains the C4 architecture model for this project.
+This directory contains the C4 architecture model for this project. Replace this
+sentence with the concrete system name, purpose, and intended reader before
+finishing C4 documentation work.
 
 ## File Structure
 
@@ -39,12 +41,13 @@ inside a specific container.
 ## Architecture Summary
 
 Describe the main responsibilities, data flows, and design decisions represented
-by the model.
+by the model. Replace this section with project-specific prose before finishing.
 
 ## Security And Trust Boundaries
 
 Describe external systems, internet-facing surfaces, identity flows, sensitive
-data stores, admin paths, and important unknowns.
+data stores, admin paths, and important unknowns. Replace this section with
+project-specific prose before finishing.
 
 ## Change Diagrams
 
@@ -109,7 +112,7 @@ respects `styles.dsl`.
 ## Assumptions And Unknowns
 
 Record modeling assumptions here. Keep diagrams focused on confirmed architecture
-and mark uncertain items clearly.
+and mark uncertain items clearly. Replace these placeholders before finishing.
 
 - Confirmed:
 - Inferred:

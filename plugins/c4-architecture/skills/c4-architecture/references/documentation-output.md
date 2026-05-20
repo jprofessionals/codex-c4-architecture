@@ -21,6 +21,32 @@ structure:
 Prefer concise prose. The README should help a reader understand the model
 without reading every DSL file.
 
+## README Writing Pattern
+
+Use concrete prose instead of generic template text:
+
+```md
+## Overview
+
+This model describes <system>, a <short purpose>. It is written for
+<audience> who need to understand <decision/support task>.
+
+## How To Read This Model
+
+Read the diagrams in this order:
+
+1. System Context: <what question it answers>.
+2. Containers: <what question it answers>.
+3. Components: <why this container is expanded>.
+
+## Architecture Summary
+
+The architecture centers on <main responsibility/boundary>. The most important
+data flow is <flow>. The main operational/security boundary is <boundary>.
+```
+
+Delete the scaffolding text after writing the project-specific explanation.
+
 ## Diagram Links
 
 Prefer embedding SVGs when the target repository commonly embeds diagrams in
@@ -35,6 +61,8 @@ If diagrams are too large for useful inline rendering, link them instead:
 ```md
 - [System Context](rendered/structurizr-SystemContext.svg)
 ```
+
+Keep diagram names, view keys, SVG filenames, and README links aligned.
 
 ## Layout Quality
 

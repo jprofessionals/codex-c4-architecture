@@ -13,6 +13,8 @@ A task using this skill is complete only when:
 - assumptions and unknowns are documented instead of invented
 - security-relevant boundaries and flows are represented or explicitly called
   out as unknown
+- final docs contain no unreplaced template instructions or placeholder model
+  names
 - `make -C docs/c4 render` succeeds, or the exact environment blocker is
   reported
 
@@ -28,9 +30,9 @@ A task using this skill is complete only when:
 
 2. Gather evidence.
 
-   Read existing documentation, configuration, entry points, deployment files,
-   route definitions, dependency manifests, and tests as needed. Keep an evidence
-   list while modeling:
+   Follow `references/repository-discovery.md`. Read existing documentation,
+   configuration, entry points, deployment files, route definitions, dependency
+   manifests, and tests as needed. Keep an evidence list while modeling:
 
    - `confirmed`: visible in code, config, docs, or user-provided facts
    - `inferred`: reasonable from context, but not directly proven
@@ -96,9 +98,15 @@ A task using this skill is complete only when:
 
    Update `docs/c4/README.md` with a human-readable explanation of the model,
    diagram reading order, architecture summary, security/trust boundaries,
-   evidence, assumptions, and maintenance instructions.
+   evidence, assumptions, and maintenance instructions. Replace all template
+   prompts with project-specific text.
 
-9. Summarize changes.
+9. Apply quality gates.
+
+   Use `references/quality-gates.md` before finishing. Fix model, documentation,
+   rendering, and readability issues found by the gates.
+
+10. Summarize changes.
 
    Tell the user which diagrams changed, which assumptions remain, and whether
    rendering was verified. Include paths to the DSL and SVG files.

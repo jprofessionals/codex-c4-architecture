@@ -20,11 +20,13 @@ Activation:
 
 1. Read `references/workflow.md`.
 2. Read `references/modeling-guardrails.md`.
-3. Read `references/structurizr-dsl.md`.
-4. Read `references/documentation-output.md`.
-5. Read `references/security-overlay.md` when trust boundaries, sensitive data,
+3. Read `references/repository-discovery.md`.
+4. Read `references/structurizr-dsl.md`.
+5. Read `references/documentation-output.md`.
+6. Read `references/quality-gates.md`.
+7. Read `references/security-overlay.md` when trust boundaries, sensitive data,
    identity, admin access, external systems, or protocols are relevant.
-6. Use `templates/docs-c4/` only when creating a new `docs/c4` workspace.
+8. Use `templates/docs-c4/` only when creating a new `docs/c4` workspace.
 
 Completion requires `make -C docs/c4 render` to succeed, or an exact environment
 blocker to be reported.

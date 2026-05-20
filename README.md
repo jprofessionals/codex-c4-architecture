@@ -18,9 +18,12 @@ PlantUML are intentionally not used as canonical model formats.
 - Code diagrams only when explicitly needed for complex components.
 - Structurizr DSL template under `docs/c4`.
 - Makefile pipeline: Structurizr DSL -> PlantUML -> SVG.
+- Repository discovery guidance to reduce prompting.
 - Evidence discipline: confirmed, inferred, and unknown facts.
 - Security overlay guidance for trust boundaries, sensitive data, identity,
   admin paths, external systems, and protocols.
+- Final quality gates for model correctness, README usefulness, and rendered SVG
+  readability.
 
 ## Requirements
 
@@ -141,9 +144,10 @@ minimum skill catalog noise, prefer the local project install.
 
 Installed skills expose catalog metadata so the agent can decide when to use
 them. This plugin keeps `SKILL.md` intentionally small. The detailed workflow,
-C4 guardrails, Structurizr notes, security overlay, provenance, and templates
-live in referenced files that are read only when the skill is activated or when a
-new `docs/c4` workspace is being created.
+C4 guardrails, repository discovery guide, Structurizr notes, documentation
+output guide, quality gates, security overlay, provenance, and templates live in
+referenced files that are read only when the skill is activated or when a new
+`docs/c4` workspace is being created.
 
 ## Validation
 
